@@ -1,0 +1,62 @@
+.checkbox {
+    label:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+
+    label {
+        padding-left:0px;
+    }
+
+    .cr {
+        position: relative;
+        display: inline-block;
+        border: 1px solid #a9a9a9;
+        border-radius: .25em;
+        width: 50px;
+        height: 50px;
+        margin-right: .5em;
+    }
+
+    .cr .text {
+        position: absolute;
+        font-size: 20px;
+        line-height: 0;
+        top: 50%;
+        left: 20%;
+    }
+
+    input[type="radio"] {
+        display: none;
+    }
+
+    label input[type="radio"] + .cr > .cr-icon {
+        position: relative;
+        display: inline-block;
+        border: 1px solid #a9a9a9;
+        border-radius: .25em;
+        width: 50px;
+        height: 50px;
+        margin-right: .5em;
+    }
+
+   span.selected {
+        border:1px solid blue;
+        position: relative;
+        display: inline-block;
+        border-radius: .25em;
+        width: 50px;
+        height: 50px;
+        margin-right: .5em;
+    }
+
+    label input[type="radio"]:disabled + .cr{
+        opacity: .5;
+    }
+
+    .mycheckbox {
+        padding-left:0px;
+    }
+}
+

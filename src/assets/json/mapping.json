@@ -1,0 +1,68 @@
+[
+    {
+      "fieldName": "itemDescription",
+      "type": "string",
+      "mappedTo": "groupName"
+    },
+    {
+        "fieldName": "rating",
+        "type": "string",
+        "mappedTo": "rating"
+    },
+    {
+        "fieldName": "variants",
+        "type": "array",
+        "mappedTo": "deviceSummary",
+        "groupBy": "colourName",
+        "properties": [
+            {
+                "fieldName": "image",
+                "type": "string",
+                "mappedTo": "merchandisingMedia[0].value"
+            },
+            {
+                "fieldName": "name",
+                "type": "string",
+                "mappedTo": "displayName"
+            },
+            {
+                "fieldName": "colour",
+                "type": "string",
+                "mappedTo": "colourName"
+            },
+            {
+                "fieldName": "colorHex",
+                "type": "string",
+                "mappedTo": "colourHex"
+            },
+            {
+                "fieldName": "description",
+                "type": "string",
+                "mappedTo": "displayDescription"
+            },
+            {
+                "fieldName": "capacities",
+                "type": "array",
+                "groupBy": "memory",
+                "mappedTo": "group",
+                "properties": [
+                    {
+                        "fieldName": "name",
+                        "type": "string",
+                        "mappedTo": "memory"
+                    },
+                    {
+                        "fieldName": "price",
+                        "type": "string",
+                        "mappedTo": "priceInfo.bundlePrice.monthlyPrice.gross"
+                    },
+                    {
+                        "fieldName": "upfrontcost",
+                        "type": "string",
+                        "mappedTo": "priceInfo.hardwarePrice.oneOffDiscountPrice.gross"
+                    }
+                ]
+            }
+        ]
+    }
+]

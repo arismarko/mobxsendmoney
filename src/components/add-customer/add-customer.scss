@@ -1,0 +1,52 @@
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], input[type=email], select, textarea {
+    width: 100%; /* Full width */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+    
+}
+
+label {
+    font-size: 10px;
+    margin-top: 10px;
+}
+
+.form-group {
+    padding-right: 10%;
+    border-right: 1px solid #ccc;
+    height: 500px;
+
+    @media only screen and (max-width: 768px) {
+        height: 200px;
+        border-right: 0px;
+        margin-bottom:20px;
+    }
+}
+
+.hide {
+    display:none;
+}
+
+.graybanner {
+    background: gray;
+    color: white;
+    padding:10px;
+    margin-bottom: 20px;
+}
+
+.formcontent {
+    margin-bottom:40px;
+}
+
+.underlink {
+    a {
+        color: white;
+        text-decoration: underline;
+    }
+}
+
+button {
+    margin-top:255px;
+}
